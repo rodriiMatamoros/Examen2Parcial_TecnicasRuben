@@ -32,3 +32,11 @@ Mi repositorio es: https://github.com/rodriiMatamoros/Examen2Parcial_TecnicasRub
     a) Se recomienda que las acciones estén lo más acopladas posibles al código para obtener el mayor rendimiento posible.
 
     b) Se favorece la semántica y la reutilización de código en detrimento del rendimiento.
+    
+    
+## Ejercicio 2
+**¿Cuáles son las características de la programación orientada a objetos?**
+
+
+## Ejercicio 3
+**¿Qué es la visibilidad de una variable o un método? ¿Qué tipos hay? ¿Cuándo debe utilizarse cada tipo?**
