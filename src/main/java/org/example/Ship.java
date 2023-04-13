@@ -96,5 +96,9 @@ public class Ship {
             return (y == startY && x >= startX && x <= endX);
         }
     }
+
+    public void hit() {
+        hits++;
+    }
 }
 
