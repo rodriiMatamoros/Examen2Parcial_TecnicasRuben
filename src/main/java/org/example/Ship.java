@@ -20,6 +20,29 @@ public class Ship {
         }
     }
 
+    public Ship (int size, int x, int y, CardinalPoints direction) {
+        this.size = size;
+        this.startX = x;
+        this.startY = y;
+        this.direction = direction;
+        if (direction == CardinalPoints.NORTH) {
+            this.endX = x;
+            this.endY = y + size - 1;
+        } else if (direction == CardinalPoints.EAST) {
+            this.endX = x + size - 1;
+            this.endY = y;
+        } else if (direction == CardinalPoints.SOUTH) {
+            this.endX = x;
+            this.endY = y - size + 1;
+        } else if (direction == CardinalPoints.WEST) {
+            this.endX = x - size + 1;
+            this.endY = y;
+        }
+        if (!isValidShip()) {
+            throw new IllegalArgumentException("Coordenadas de barco inválidas");
+        }
+    }
+
     public int getSize() {
         return size;
     }
