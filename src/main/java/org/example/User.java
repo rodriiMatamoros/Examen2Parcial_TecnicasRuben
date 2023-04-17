@@ -16,6 +16,25 @@ public class User {
         this.isAlive = true;
     }
 
+    public User() {
+        this.ships = new ArrayList<>();
+        this.isAlive = true;
+    }
+
+    public User(String nextLine) {
+this.ships = new ArrayList<>();
+        this.isAlive = true;
+        String[] ships = nextLine.split(";");
+        for (String ship : ships) {
+            String[] shipData = ship.split(",");
+            int size = Integer.parseInt(shipData[0]);
+            int x = Integer.parseInt(shipData[1]);
+            int y = Integer.parseInt(shipData[2]);
+            CardinalPoints direction = CardinalPoints.valueOf(shipData[3]);
+            this.ships.add(new Ship(size, x, y, direction));
+        }
+    }
+
     public List<Ship> getShips() {
         return ships;
     }
@@ -32,7 +51,7 @@ public class User {
         isAlive = alive;
     }
 
-    public boolean attack(int x, int y, User user) throws ArrayIndexOutOfBoundsException {
+    public boolean attack(int x,int y, User user) throws ArrayIndexOutOfBoundsException {
         for (Ship ship : user.getShips()) {
             if (ship.getHits() >= ship.getSize()) {
                 continue;
@@ -70,6 +89,18 @@ public class User {
 
     public void die() {
         isAlive = false;
+    }
+
+    public boolean getName() {
+        return false;
+    }
+
+    public Object getBoard() {
+        return null;
+    }
+
+    public boolean attack(int getShot, User user1) {
+        return false;
     }
 }
 
